@@ -59,15 +59,11 @@ public class MainActivity extends AppCompatActivity {
                 ActivityCompat.requestPermissions(MainActivity.this,
                         new String[]{Manifest.permission.READ_CALL_LOG} , 1);
             }
-        }else  {
-//            textView = (TextView) findViewById(R.id.textview);
-//            textView.setText(getCallDetails1());
-            dataa = getCallDetails1();
         }
+//        startService ();
+//        go();
         settingAlarm();
         startAlarm();
-
-//        allFilds();
 
     }
 
@@ -86,10 +82,10 @@ public class MainActivity extends AppCompatActivity {
     private void startAlarm() {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(),  1000*60*1 , pi);
+            alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(),  1000*60 , pi);
             Toast.makeText(this , "done1" , Toast.LENGTH_LONG).show();
         } else {
-            alarmManager.setRepeating(AlarmManager.ELAPSED_REALTIME, System.currentTimeMillis(),  1000*60*1 , pi);
+            alarmManager.setRepeating(AlarmManager.ELAPSED_REALTIME, System.currentTimeMillis(),  1000*60 , pi);
             Toast.makeText(this , "done2" , Toast.LENGTH_LONG).show();
         }
 
@@ -244,4 +240,14 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        });
 //    }
+
+//    public void startService (){
+//        startService(new Intent(getBaseContext() , BackgroundService.class));
+//        settingAlarm();
+//        startAlarm();
+//    }
+    public void go(){
+    settingAlarm();
+    startAlarm();
+    }
 }

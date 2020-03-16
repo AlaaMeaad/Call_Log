@@ -15,8 +15,8 @@ public abstract class WakeLocker {
         PowerManager pm = (PowerManager) ctx.getSystemService(Context.POWER_SERVICE);
         wakeLock = pm.newWakeLock(PowerManager.FULL_WAKE_LOCK |
                 PowerManager.ACQUIRE_CAUSES_WAKEUP |
-                PowerManager.ON_AFTER_RELEASE,"tag");
-//        wakeLock.acquire();
+                PowerManager.ON_AFTER_RELEASE, "APP_TAG");
+        wakeLock.acquire();
     }
 
     public static void release() {
