@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     private DataManagerImpl dataManager;
     StringBuffer sb;
     String dataa;
+    public static String TAG = "MainActivity";
     static MainActivity mainActivity;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

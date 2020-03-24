@@ -17,8 +17,8 @@ public class MyReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         WakeLocker.acquire(context);
-//        MainActivity.mainActivity.allFilds();
-            Toast.makeText(context.getApplicationContext(), "Alarm Manager just ran 12", Toast.LENGTH_LONG).show();
+        MainActivity.mainActivity.allFilds();
+            Toast.makeText(context.getApplicationContext(), "Alarm Manager just ran", Toast.LENGTH_LONG).show();
             Log.e("sssdddasd", "onReceive: " );
 
 
